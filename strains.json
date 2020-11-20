@@ -1,0 +1,16 @@
+{
+  "strains": [
+    {
+      "name": "OG Kush",
+      "type": "hybrid",
+      "cultivator": "LA Kush",
+      "effects": ["mellow", "relaxed"]
+    },
+    {
+      "name": "Wedding Cake",
+      "type": "hybrid",
+      "cultivator": "Cookies",
+      "effects": ["sleepy", "calm"]
+    }
+  ]
+}
