@@ -1,3 +1,3 @@
 module.exports = {
-  games: require("./strains")
+  strains: require("./strains")
 }
