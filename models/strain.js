@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Strain = new Schema({
+const StrainSchema = new Schema({
   name: String,
   type: String,
   cultivator: String,
-  effects: String
+  effects: []
 })
 
-const Strain = mongoose.model('Strain', Strain)
+const Strain = mongoose.model('Strain', StrainSchema)
 
 module.exports = Strain

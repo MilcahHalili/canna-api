@@ -1,3 +1,3 @@
 module.exports = {
-  strains: require("./strains")
+  strains: require('./strains')
 }

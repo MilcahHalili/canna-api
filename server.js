@@ -13,6 +13,6 @@ const corsOptions = {
 app.use(express.json())
 app.use(cors(corsOptions))
 
-app.use('api/v1/strains', routes.strains)
+app.use("/api/v1/strains", routes.strains)
 
 app.listen(port, () => console.log(`Server is running on port ${port}`))
