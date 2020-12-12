@@ -29,12 +29,35 @@ const create = (req, res) => {
     })
     .catch(err => {
       console.log('Error in strain.create: ', err)
-      res.json({ Error: 'Unable to create data' })
+      res.json({ Error: 'Unable to create strain data' })
     })
+}
+
+const update = (req, res) => {
+  db.Strain.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedStrain) => {
+      if (err) console.log('Error in strain.update: ', err)
+      
+      res.json({ strain: updatedStrain })
+    }
+  )
+}
+
+const destroy = (req, res) => {
+  db.Strain.findByIdAndDelete(req.params.id, (err, deletedStrain) => {
+    if (err) console.log("Error in strains.destroy: ", err)
+
+    res.json({ strain: deletedStrain })
+  })
 }
 
 module.exports = {
   index,
   show,
-  create
+  create,
+  update,
+  destroy
 }
